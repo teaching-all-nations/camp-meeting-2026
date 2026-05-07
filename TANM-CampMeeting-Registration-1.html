@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TANM Camp Meeting 2026 | Register Now</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #F0D080;
+    --gold-dark: #8B6914;
+    --fire: #E85D04;
+    --deep: #0A0A1A;
+    --dark: #12121F;
+    --card: #1A1A2E;
+    --text: #F0E8D0;
+    --white: #FFFFFF;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--deep);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 20px 60px;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 50%, rgba(232,93,4,0.10) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 50%, rgba(232,93,4,0.10) 0%, transparent 50%),
+      linear-gradient(180deg, #08081A 0%, #101025 60%, #0A0A1A 100%);
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(201,168,76,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 20%, rgba(201,168,76,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 70%, rgba(201,168,76,0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 60%, rgba(255,255,255,0.15) 0%, transparent 100%);
+    pointer-events: none;
+  }
+
+  .lightning-left, .lightning-right {
+    position: absolute;
+    top: 0;
+    width: 3px;
+    height: 60%;
+    opacity: 0.15;
+    pointer-events: none;
+    animation: flicker 4s infinite;
+  }
+  .lightning-left {
+    left: 15%;
+    background: linear-gradient(180deg, transparent, var(--gold-light), transparent);
+    transform: rotate(-10deg);
+  }
+  .lightning-right {
+    right: 15%;
+    background: linear-gradient(180deg, transparent, var(--gold-light), transparent);
+    transform: rotate(10deg);
+    animation-delay: 2s;
+  }
+  @keyframes flicker {
+    0%,100% { opacity: 0.1; }
+    50% { opacity: 0.25; }
+    75% { opacity: 0.05; }
+  }
+
+  .cross-glow {
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 80px;
+    opacity: 0.15;
+    pointer-events: none;
+  }
+  .cross-glow::before {
+    content: '✝';
+    font-size: 80px;
+    color: var(--gold);
+    text-shadow: 0 0 40px var(--gold), 0 0 80px rgba(201,168,76,0.5);
+    display: block;
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+  @keyframes glow-pulse {
+    0%,100% { text-shadow: 0 0 40px var(--gold), 0 0 80px rgba(201,168,76,0.5); }
+    50% { text-shadow: 0 0 60px var(--gold-light), 0 0 120px rgba(201,168,76,0.8); }
+  }
+
+  .tag-line {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    opacity: 0.85;
+    animation: fadeUp 0.8s ease both;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(36px, 10vw, 72px);
+    font-weight: 900;
+    line-height: 1.0;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 40%, var(--gold-light) 60%, var(--gold) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: none;
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.4));
+    animation: fadeUp 0.8s 0.1s ease both;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(18px, 5vw, 32px);
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 3px;
+    margin: 4px 0 20px;
+    animation: fadeUp 0.8s 0.2s ease both;
+  }
+
+  .year-badge {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: clamp(28px, 8vw, 52px);
+    font-weight: 700;
+    color: var(--gold-light);
+    border: 2px solid var(--gold);
+    padding: 4px 24px;
+    letter-spacing: 6px;
+    margin-bottom: 28px;
+    box-shadow: 0 0 30px rgba(201,168,76,0.2), inset 0 0 20px rgba(201,168,76,0.05);
+    animation: fadeUp 0.8s 0.3s ease both;
+  }
+
+  .theme-banner {
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(232,93,4,0.08));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 4px;
+    padding: 16px 32px;
+    margin-bottom: 28px;
+    animation: fadeUp 0.8s 0.4s ease both;
+  }
+  .theme-label {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--gold);
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+  .theme-text {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(16px, 4vw, 26px);
+    font-weight: 700;
+    color: var(--white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .event-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 32px;
+    animation: fadeUp 0.8s 0.5s ease both;
+  }
+  .detail-pill {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(201,168,76,0.08);
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    color: var(--text);
+    letter-spacing: 1px;
+  }
+  .detail-pill .icon { font-size: 16px; }
+
+  .perks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    animation: fadeUp 0.8s 0.6s ease both;
+  }
+  .perk {
+    background: linear-gradient(135deg, rgba(232,93,4,0.15), rgba(201,168,76,0.1));
+    border: 1px solid rgba(232,93,4,0.3);
+    border-radius: 8px;
+    padding: 12px 20px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  .perk .perk-icon { font-size: 22px; display: block; margin-bottom: 4px; }
+
+  .cta-btn {
+    display: inline-block;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--deep);
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+    padding: 18px 48px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 8px 32px rgba(201,168,76,0.3), 0 0 0 2px rgba(201,168,76,0.2);
+    transition: all 0.3s ease;
+    animation: fadeUp 0.8s 0.7s ease both;
+  }
+  .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 48px rgba(201,168,76,0.5), 0 0 0 3px rgba(201,168,76,0.4);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* COUNTER SECTION */
+  .counter-section {
+    background: linear-gradient(180deg, var(--deep) 0%, var(--dark) 100%);
+    padding: 60px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+  }
+  .counter-label {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .counter-number {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(56px, 15vw, 100px);
+    font-weight: 900;
+    line-height: 1;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0 0 20px rgba(201,168,76,0.3));
+  }
+  .counter-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    letter-spacing: 3px;
+    color: var(--text);
+    opacity: 0.6;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  /* FORM SECTION */
+  .form-section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 70px 20px;
+  }
+  .section-header {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  .section-tag {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 10px;
+  }
+  .section-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(22px, 6vw, 36px);
+    font-weight: 700;
+    color: var(--white);
+  }
+  .section-divider {
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 16px auto 0;
+  }
+
+  .form-card {
+    background: linear-gradient(135deg, rgba(26,26,46,0.9), rgba(18,18,31,0.9));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 12px;
+    padding: 40px 32px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5), inset 0 1px 0 rgba(201,168,76,0.1);
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  @media (max-width: 520px) {
+    .form-row { grid-template-columns: 1fr; }
+    .form-card { padding: 28px 18px; }
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+  .form-group.full { grid-column: 1 / -1; }
+
+  label {
+    display: block;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    opacity: 0.85;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    padding: 13px 16px;
+    color: var(--white);
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    -webkit-appearance: none;
+  }
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.1);
+    background: rgba(201,168,76,0.04);
+  }
+  select option { background: var(--card); color: var(--white); }
+  textarea { resize: vertical; min-height: 90px; }
+  input::placeholder, textarea::placeholder { color: rgba(240,232,208,0.3); }
+
+  .radio-group {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .radio-option {
+    flex: 1;
+    min-width: 100px;
+  }
+  .radio-option input[type="radio"] {
+    display: none;
+  }
+  .radio-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 8px;
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+  }
+  .radio-option input[type="radio"]:checked + label {
+    background: rgba(201,168,76,0.15);
+    border-color: var(--gold);
+    color: var(--gold-light);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold), var(--gold-light));
+    border: none;
+    border-radius: 6px;
+    padding: 18px;
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--deep);
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 8px 32px rgba(201,168,76,0.25);
+  }
+  .submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 48px rgba(201,168,76,0.4);
+  }
+  .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  /* REGISTRANTS LIST */
+  .registrants-section {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 20px 80px;
+  }
+  .registrants-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 32px;
+  }
+  .registrant-card {
+    background: rgba(26,26,46,0.6);
+    border: 1px solid rgba(201,168,76,0.12);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    animation: fadeUp 0.4s ease both;
+  }
+  .registrant-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--deep);
+    flex-shrink: 0;
+  }
+  .registrant-info { flex: 1; }
+  .registrant-name {
+    font-family: 'Cinzel', serif;
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 600;
+  }
+  .registrant-meta {
+    font-size: 12px;
+    color: rgba(240,232,208,0.5);
+    margin-top: 2px;
+  }
+  .registrant-badge {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    color: var(--gold);
+    background: rgba(201,168,76,0.1);
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 20px;
+    padding: 3px 10px;
+    flex-shrink: 0;
+  }
+
+  /* SUCCESS MESSAGE */
+  .success-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+  .success-overlay.active { display: flex; }
+  .success-box {
+    background: linear-gradient(135deg, var(--card), var(--dark));
+    border: 2px solid var(--gold);
+    border-radius: 16px;
+    padding: 48px 36px;
+    text-align: center;
+    max-width: 420px;
+    width: 100%;
+    box-shadow: 0 0 80px rgba(201,168,76,0.3);
+    animation: popIn 0.4s cubic-bezier(0.34,1.56,0.64,1) both;
+  }
+  @keyframes popIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+  }
+  .success-icon { font-size: 56px; margin-bottom: 16px; }
+  .success-title {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 22px;
+    color: var(--gold-light);
+    margin-bottom: 12px;
+  }
+  .success-text {
+    font-size: 15px;
+    color: var(--text);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+  .success-close {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    border: none;
+    border-radius: 6px;
+    padding: 14px 36px;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--deep);
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(201,168,76,0.1);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  .footer-logo {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 20px;
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-bottom: 8px;
+  }
+  .footer-host {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    color: var(--text);
+    opacity: 0.5;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .footer-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #128C7E;
+    color: white;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s;
+  }
+  .footer-whatsapp:hover { background: #075E54; transform: translateY(-2px); }
+  .footer-copy {
+    font-size: 11px;
+    color: rgba(240,232,208,0.25);
+    letter-spacing: 2px;
+    margin-top: 24px;
+    font-family: 'Cinzel', serif;
+    text-transform: uppercase;
+  }
+
+  /* Countdown */
+  .countdown-section {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background: rgba(0,0,0,0.3);
+    border-bottom: 1px solid rgba(201,168,76,0.1);
+  }
+  .cd-box {
+    text-align: center;
+    min-width: 70px;
+  }
+  .cd-num {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: clamp(28px, 8vw, 48px);
+    font-weight: 900;
+    color: var(--gold-light);
+    line-height: 1;
+    display: block;
+  }
+  .cd-label {
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--gold);
+    opacity: 0.6;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4px;
+  }
+  .cd-sep {
+    font-family: 'Cinzel', serif;
+    font-size: 36px;
+    color: var(--gold);
+    opacity: 0.3;
+    align-self: center;
+    padding-bottom: 8px;
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="lightning-left"></div>
+  <div class="lightning-right"></div>
+  <div class="cross-glow"></div>
+
+  <p class="tag-line">Teaching All Nations Mission Presents</p>
+
+  <h1 class="hero-title">TANM</h1>
+  <h2 class="hero-subtitle">Camp Meeting</h2>
+  <div class="year-badge">2026</div>
+
+  <div class="theme-banner">
+    <p class="theme-label">Theme</p>
+    <p class="theme-text">Walking in God's Power</p>
+  </div>
+
+  <div class="event-details">
+    <div class="detail-pill">
+      <span class="icon">📅</span>
+      <span>Thursday 6th &ndash; Saturday 8th August, 2026</span>
+    </div>
+    <div class="detail-pill">
+      <span class="icon">📍</span>
+      <span>TANM Glory City, Km. 4, Ganmo, Kwara State</span>
+    </div>
+  </div>
+
+  <div class="perks">
+    <div class="perk">
+      <span class="perk-icon">🍽️</span>
+      Free Food
+    </div>
+    <div class="perk">
+      <span class="perk-icon">🏠</span>
+      Free Lodging
+    </div>
+    <div class="perk">
+      <span class="perk-icon">🔥</span>
+      3 Days of Power
+    </div>
+  </div>
+
+  <a href="#register" class="cta-btn">Register Now</a>
+</section>
+
+<!-- COUNTDOWN -->
+<div class="countdown-section">
+  <div class="cd-box">
+    <span class="cd-num" id="cd-days">000</span>
+    <span class="cd-label">Days</span>
+  </div>
+  <span class="cd-sep">:</span>
+  <div class="cd-box">
+    <span class="cd-num" id="cd-hours">00</span>
+    <span class="cd-label">Hours</span>
+  </div>
+  <span class="cd-sep">:</span>
+  <div class="cd-box">
+    <span class="cd-num" id="cd-mins">00</span>
+    <span class="cd-label">Minutes</span>
+  </div>
+  <span class="cd-sep">:</span>
+  <div class="cd-box">
+    <span class="cd-num" id="cd-secs">00</span>
+    <span class="cd-label">Seconds</span>
+  </div>
+</div>
+
+<!-- COUNTER -->
+<div class="counter-section">
+  <p class="counter-label">Expected Participants Registered</p>
+  <div class="counter-number" id="counter">0</div>
+  <p class="counter-sub">and counting</p>
+</div>
+
+<!-- FORM -->
+<section class="form-section" id="register">
+  <div class="section-header">
+    <p class="section-tag">Secure Your Place</p>
+    <h2 class="section-title">Register for Camp Meeting</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="form-card">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="firstname">First Name *</label>
+        <input type="text" id="firstname" placeholder="Your first name" required>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name *</label>
+        <input type="text" id="lastname" placeholder="Your last name" required>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="phone">Phone Number *</label>
+        <input type="tel" id="phone" placeholder="e.g. 08012345678" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="Optional">
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="state">State of Origin *</label>
+        <select id="state" required>
+          <option value="">Select your state</option>
+          <option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option>
+          <option>Anambra</option><option>Bauchi</option><option>Bayelsa</option>
+          <option>Benue</option><option>Borno</option><option>Cross River</option>
+          <option>Delta</option><option>Ebonyi</option><option>Edo</option>
+          <option>Ekiti</option><option>Enugu</option><option>FCT Abuja</option>
+          <option>Gombe</option><option>Imo</option><option>Jigawa</option>
+          <option>Kaduna</option><option>Kano</option><option>Katsina</option>
+          <option>Kebbi</option><option>Kogi</option><option>Kwara</option>
+          <option>Lagos</option><option>Nasarawa</option><option>Niger</option>
+          <option>Ogun</option><option>Ondo</option><option>Osun</option>
+          <option>Oyo</option><option>Plateau</option><option>Rivers</option>
+          <option>Sokoto</option><option>Taraba</option><option>Yobe</option>
+          <option>Zamfara</option><option>Outside Nigeria</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender *</label>
+        <select id="gender" required>
+          <option value="">Select</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Do You Need Accommodation? *</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" name="accommodation" id="acc-yes" value="Yes">
+          <label for="acc-yes">Yes, I need lodging</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" name="accommodation" id="acc-no" value="No">
+          <label for="acc-no">No, I have arrangements</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="groupsize">Total in Your Group *</label>
+        <select id="groupsize" required>
+          <option value="">Select</option>
+          <option value="1">Just Me (1)</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5">5 People</option>
+          <option value="6-10">6 to 10 People</option>
+          <option value="11+">More than 10</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="heardabout">How Did You Hear About This? *</label>
+        <select id="heardabout" required>
+          <option value="">Select</option>
+          <option>WhatsApp</option>
+          <option>Facebook</option>
+          <option>Instagram</option>
+          <option>Church Announcement</option>
+          <option>Friend or Family</option>
+          <option>Flyer / Poster</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="prayer">Any Special Prayer Request? (Optional)</label>
+      <textarea id="prayer" placeholder="Share what you would like God to do for you at this camp meeting..."></textarea>
+    </div>
+
+    <button class="submit-btn" id="submitBtn" onclick="submitForm()">
+      Complete My Registration
+    </button>
+  </div>
+</section>
+
+<!-- REGISTRANTS -->
+<section class="registrants-section">
+  <div class="section-header">
+    <p class="section-tag">Who Is Coming</p>
+    <h2 class="section-title">Registered Participants</h2>
+    <div class="section-divider"></div>
+  </div>
+  <div class="registrants-list" id="registrantsList">
+    <p style="text-align:center;opacity:0.4;font-family:'Cinzel',serif;font-size:13px;letter-spacing:2px;padding:40px 0;">
+      No registrations yet. Be the first to sign up!
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">TANM</div>
+  <p class="footer-host">Teaching All Nations Mission</p>
+  <p style="font-family:'Cinzel',serif;font-size:12px;color:rgba(240,232,208,0.5);letter-spacing:1px;margin-bottom:20px;">
+    Host: Rev. Bosun Afolayan
+  </p>
+  <a href="https://wa.me/2348108146664?text=Hello%2C%20I%20want%20to%20inquire%20about%20TANM%20Camp%20Meeting%202026"
+     class="footer-whatsapp" target="_blank">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    Contact Us on WhatsApp
+  </a>
+  <p class="footer-copy">TANM Camp Meeting 2026 &bull; All Rights Reserved</p>
+</footer>
+
+<!-- SUCCESS OVERLAY -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <div class="success-icon">🙌</div>
+    <h2 class="success-title">You're Registered!</h2>
+    <p class="success-text" id="successMsg">
+      Glory to God! Your registration is confirmed. We look forward to seeing you at TANM Camp Meeting 2026.
+    </p>
+    <button class="success-close" onclick="closeSuccess()">Praise the Lord!</button>
+  </div>
+</div>
+
+<script>
+  // Storage key
+  const STORAGE_KEY = 'tanm_camp_2026_registrants';
+
+  // Load registrants from localStorage
+  function loadRegistrants() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || [];
+    } catch { return []; }
+  }
+
+  // Save registrants
+  function saveRegistrants(list) {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(list));
+  }
+
+  // Render counter
+  function updateCounter(count) {
+    const el = document.getElementById('counter');
+    let start = 0;
+    const end = count;
+    if (end === 0) { el.textContent = '0'; return; }
+    const timer = setInterval(() => {
+      start += Math.ceil(end / 30);
+      if (start >= end) { start = end; clearInterval(timer); }
+      el.textContent = start;
+    }, 30);
+  }
+
+  // Render list
+  function renderRegistrants(list) {
+    const container = document.getElementById('registrantsList');
+    if (list.length === 0) {
+      container.innerHTML = '<p style="text-align:center;opacity:0.4;font-family:\'Cinzel\',serif;font-size:13px;letter-spacing:2px;padding:40px 0;">No registrations yet. Be the first to sign up!</p>';
+      return;
+    }
+    container.innerHTML = list.slice().reverse().map((r, i) => {
+      const initials = (r.firstname[0] || '') + (r.lastname[0] || '');
+      const acc = r.accommodation === 'Yes' ? '🏠 Needs Lodging' : '✓ Has Arrangements';
+      const num = list.length - i;
+      return `
+        <div class="registrant-card">
+          <div class="registrant-avatar">${initials.toUpperCase()}</div>
+          <div class="registrant-info">
+            <div class="registrant-name">${r.firstname} ${r.lastname}</div>
+            <div class="registrant-meta">${r.state} &bull; Group of ${r.groupsize} &bull; ${acc}</div>
+          </div>
+          <div class="registrant-badge">#${num}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  // Init
+  const registrants = loadRegistrants();
+  updateCounter(registrants.length);
+  renderRegistrants(registrants);
+
+  // Countdown
+  function updateCountdown() {
+    const eventDate = new Date('2026-08-06T08:00:00');
+    const now = new Date();
+    const diff = eventDate - now;
+    if (diff <= 0) {
+      document.querySelector('.countdown-section').innerHTML = '<p style="font-family:\'Cinzel\',serif;color:var(--gold);letter-spacing:3px;font-size:18px;">The Camp Meeting is HERE!</p>';
+      return;
+    }
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const secs = Math.floor((diff % (1000 * 60)) / 1000);
+    document.getElementById('cd-days').textContent = String(days).padStart(3, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+    document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+  }
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // Submit
+  function submitForm() {
+    const firstname = document.getElementById('firstname').value.trim();
+    const lastname = document.getElementById('lastname').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const state = document.getElementById('state').value;
+    const gender = document.getElementById('gender').value;
+    const accommodation = document.querySelector('input[name="accommodation"]:checked')?.value || '';
+    const groupsize = document.getElementById('groupsize').value;
+    const heardabout = document.getElementById('heardabout').value;
+    const prayer = document.getElementById('prayer').value.trim();
+
+    if (!firstname || !lastname || !phone || !state || !gender || !accommodation || !groupsize || !heardabout) {
+      alert('Please fill in all required fields before submitting.');
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.disabled = true;
+    btn.textContent = 'Submitting...';
+
+    const record = { firstname, lastname, phone, state, gender, accommodation, groupsize, heardabout, prayer, timestamp: new Date().toISOString() };
+
+    const list = loadRegistrants();
+    list.push(record);
+    saveRegistrants(list);
+    updateCounter(list.length);
+    renderRegistrants(list);
+
+    // WhatsApp notification
+    const wa_number = '2348108146664';
+    const wa_msg = encodeURIComponent(
+      `NEW CAMP MEETING REGISTRATION\n\n` +
+      `Name: ${firstname} ${lastname}\n` +
+      `Phone: ${phone}\n` +
+      `State: ${state}\n` +
+      `Gender: ${gender}\n` +
+      `Accommodation: ${accommodation}\n` +
+      `Group Size: ${groupsize}\n` +
+      `Heard About Us: ${heardabout}\n` +
+      (prayer ? `Prayer Request: ${prayer}\n` : '') +
+      `\nTotal Registrations: ${list.length}\n` +
+      `Registered: ${new Date().toLocaleString()}`
+    );
+    const wa_link = `https://wa.me/${wa_number}?text=${wa_msg}`;
+
+    // Open WhatsApp in background tab
+    const waWindow = window.open(wa_link, '_blank');
+
+    // Show success
+    document.getElementById('successMsg').textContent =
+      `Glory to God, ${firstname}! Your registration is confirmed. You are participant number ${list.length}. We look forward to seeing you at TANM Camp Meeting 2026!`;
+    document.getElementById('successOverlay').classList.add('active');
+
+    // Reset form
+    document.getElementById('firstname').value = '';
+    document.getElementById('lastname').value = '';
+    document.getElementById('phone').value = '';
+    document.getElementById('email').value = '';
+    document.getElementById('state').value = '';
+    document.getElementById('gender').value = '';
+    document.querySelectorAll('input[name="accommodation"]').forEach(r => r.checked = false);
+    document.getElementById('groupsize').value = '';
+    document.getElementById('heardabout').value = '';
+    document.getElementById('prayer').value = '';
+
+    btn.disabled = false;
+    btn.textContent = 'Complete My Registration';
+  }
+
+  function closeSuccess() {
+    document.getElementById('successOverlay').classList.remove('active');
+  }
+</script>
+</body>
+</html>
